@@ -7,16 +7,27 @@ const routes = [
   {
     path: '/',
     component: IndexVue,
+    meta: {
+      title: 'Index Page',
+    }
   },
   {
     path: '/register',
     component: RegisterVue,
+    meta: {
+      title: 'Register Page',
+    }
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes: routes
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title + ''
+  next()
 })
 
 export default router
