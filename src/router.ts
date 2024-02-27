@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AppVue from './App.vue'
+
+import IndexVue from './pages/index.vue'
 import RegisterVue from './pages/Register.vue'
 
 const routes = [
   {
     path: '/',
-    component: AppVue,
+    component: IndexVue,
   },
   {
     path: '/register',
